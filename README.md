@@ -43,10 +43,17 @@ Container stoppen: `docker stop 01-simple-container`
 ## Beispiel 2: simple bash script
 
 In diesem Beispiel wird der Unterschied zwischen `ADD` und `COPY` erklärt. Zusätzlich kommt `ENTRYPOINT` hinzu.  
-Ein kleines Shellscript, welches anhand der verwendeten Container Destribution `git` installiert und ein Repository cloned.
+Ein kleines Shellscript, welches anhand der verwendeten Container Destribution `git` installiert und ein Repository cloned.  
+Container bauen: `docker build -t 02-simple-bashscript .`  
+Container ausführen: `docker run --name 02-simple-bashscript 02-simple-bashscript`  
+Container stoppen: `docker stop 02-simple-bashscript`
 
 ## Beispiel 3: simple service
 
 Jetzt wird es etwas interessanter. Wir installieren uns NodeJS im Container und erstellen uns einen kleinen Webserver. `WORKDIR` kommt als neue Option mit hinzu.
+
+Container bauen: `docker build -t 03-simple-service .`  
+Container ausführen: `docker run --name 03-simple-service 03-simple-service`  
+Container stoppen: `docker stop 03-simple-service`
 
 Hands-On Training: Environment Variablen mit `ENV` und Static File Serve mit Volumes ausserhalb des Containers.
