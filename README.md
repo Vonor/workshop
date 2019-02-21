@@ -1,7 +1,13 @@
-# workshop
+# Workshop
 Docker und Kubernetes Workshop
 
-# Docker
+- [Workshop](#workshop)
+  - [Docker](#docker)
+    - [Beispiel 1: simple container](#beispiel-1-simple-container)
+    - [Beispiel 2: simple bash script](#beispiel-2-simple-bash-script)
+    - [Beispiel 3: simple service](#beispiel-3-simple-service)
+
+## Docker
 
 * Container Virtualisierung
 * Keine Hardware Virtualisierung
@@ -33,14 +39,14 @@ CMD ["befehl", "arg1", "arg2"]
 ENTRYPOINT ["befehl", "arg1", "arg2"]
 ```
 
-## Beispiel 1: simple container
+### Beispiel 1: simple container
 
 In diesem Beispiel werden die Dockerfile Befehle `FROM`, `COPY`, `RUN` und `CMD` behandelt.  
 Container bauen: `docker build -t 01-simple-container .`  
 Container ausführen: `docker run --name 01-simple-container 01-simple-container`  
 Container stoppen: `docker stop 01-simple-container`
 
-## Beispiel 2: simple bash script
+### Beispiel 2: simple bash script
 
 In diesem Beispiel wird der Unterschied zwischen `ADD` und `COPY` erklärt. Zusätzlich kommt `ENTRYPOINT` hinzu.  
 Ein kleines Shellscript, welches anhand der verwendeten Container Destribution `git` installiert und ein Repository cloned.  
@@ -48,7 +54,7 @@ Container bauen: `docker build -t 02-simple-bashscript .`
 Container ausführen: `docker run --name 02-simple-bashscript 02-simple-bashscript`  
 Container stoppen: `docker stop 02-simple-bashscript`
 
-## Beispiel 3: simple service
+### Beispiel 3: simple service
 
 Jetzt wird es etwas interessanter. Wir installieren uns NodeJS im Container und erstellen uns einen kleinen Webserver. `WORKDIR` kommt als neue Option mit hinzu.
 
