@@ -29,6 +29,6 @@ RUN befehl
 ENV key value
 ENV key=value
 
-CMD ['befehl', 'arg1', 'arg2']
-ENTRYPOINT ['befehl', 'arg1', 'arg2']
+CMD ["befehl", "arg1", "arg2"]
+ENTRYPOINT ["befehl", "arg1", "arg2"]
 ```
