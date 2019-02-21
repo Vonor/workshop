@@ -1,6 +1,6 @@
-// simple webserver
+// simple webserver mit Environment Variablen
 const http = require('http')
-const port = 3000
+const port = process.env.PORT || 3000
 
 const requestHandler = (request, response) => {
   if (request.url === "/stop") {
