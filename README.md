@@ -2,6 +2,8 @@
 
 Docker und Kubernetes Workshop
 
+(Diese Dokumentation ist für einen Firmeninternen Hands-On Workshop gedacht. Aus Datenschutzgründen wird weder die Firma genannt, noch entsprechende Verweise auf die Firma öffentlich gemacht. Die dokumentation kann daher als Allgemein betrachtet werden und von jedem benutzt werden. Etwaige verweise auf Mails oder interne Dokumentationen sind in diesem Fall zu ignorieren.)
+
 - [Workshop](#workshop)
   - [Docker](#docker)
     - [Beispiel 1: simple container](#beispiel-1-simple-container)
@@ -11,6 +13,8 @@ Docker und Kubernetes Workshop
 
 ## Docker
 
+Was ist Docker
+
 - Container Virtualisierung
 - Keine Hardware Virtualisierung
 - Host unabhängies Environment
@@ -19,6 +23,17 @@ Docker und Kubernetes Workshop
 - Zum testen von Software oder Services
   - Ohne das Host System zu kompromitieren (Library Versionen, etc.)
   - Schadsoftware kann keinen Schaden anrichten (Ähnlich Jails, chroot)
+- Zum bereitstellen von Services und Lifecycle-Management
+
+Praktische Anwendung in unserer Firma?
+
+- Apache für verschiedene Linux Distributionen kompilieren und auch gleich testen. (Siehe Apache Docker Cronjob Mails).
+- Bereitstellung eines Git Services oder anderer Services
+- Unser Produkt als Service bereitstellen.
+  - Wrapper Script
+  - Konfiguration des Produkts über Environment Variablen
+  - Somit vereinfachte Bereitstellung des Produkts
+  - Container Orchestrierung mit Kubernetes um unser Produkt auf Platformen wie Azure AKS, Amazon EKS oder auch Googles Kubernetes Services, Digital Ocean, etc etc. bereit zu stellen.
 
 [Dokumentation für Dockerfile](https://docs.docker.com/engine/reference/builder/)
 
