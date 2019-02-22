@@ -6,6 +6,7 @@ Docker und Kubernetes Workshop
     - [Beispiel 1: simple container](#beispiel-1-simple-container)
     - [Beispiel 2: simple bash script](#beispiel-2-simple-bash-script)
     - [Beispiel 3: simple service](#beispiel-3-simple-service)
+    - [Beispiel 4: Gitea](#beispiel-4-gitea)
 
 ## Docker
 
@@ -63,3 +64,21 @@ Container ausführen: `docker run --name 03-simple-service 03-simple-service`
 Container stoppen: `docker stop 03-simple-service`
 
 Hands-On Training: Environment Variablen mit `ENV` und Static File Serve mit Volumes ausserhalb des Containers.
+
+### Beispiel 4: Gitea
+
+```
+Usage: adduser [OPTIONS] USER [GROUP]
+
+Create new user, or add USER to GROUP
+
+        -h DIR          Home directory
+        -g GECOS        GECOS field
+        -s SHELL        Login shell
+        -G GRP          Group
+        -S              Create a system user
+        -D              Don't assign a password
+        -H              Don't create home directory
+        -u UID          User id
+        -k SKEL         Skeleton directory (/etc/skel)
+```
