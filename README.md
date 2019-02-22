@@ -10,6 +10,7 @@ Docker und Kubernetes Workshop
     - [Beispiel 2: simple bash script](#beispiel-2-simple-bash-script)
     - [Beispiel 3: simple service](#beispiel-3-simple-service)
     - [Beispiel 4: Gitea](#beispiel-4-gitea)
+    - [Best Practice](#best-practice)
 
 ## Docker
 
@@ -105,3 +106,11 @@ Create new user, or add USER to GROUP
         -u UID          User id
         -k SKEL         Skeleton directory (/etc/skel)
 ```
+
+### Best Practice
+
+Es empfiehlt sich immer ein Wrapper Script als `ENTRYPOINT` bereitzustellen, welches wichtige Aufgaben übernimmt.
+
+- Environment Variablen auslesen und Konfigurationsdateien erstellen/anpassen
+- UNIX Signale (man kill) abfangen (trap --help) um einen clean shutdown zu gewährleisten
+- Die eigentlichen Services starten und ggfs. erneut starten.
