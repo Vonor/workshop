@@ -1,4 +1,5 @@
 # Workshop
+
 Docker und Kubernetes Workshop
 
 - [Workshop](#workshop)
@@ -10,18 +11,16 @@ Docker und Kubernetes Workshop
 
 ## Docker
 
-* Container Virtualisierung
-* Keine Hardware Virtualisierung
-* Host unabhängies Environment
-  * Gut zum bauen von verschiedenen Binär-Paketen für Verschiedene Linux Systeme
-  * Ein Build Host, N Build Environments
-* Zum testen von Software oder Services
-  * Ohne das Host System zu kompromitieren (Library Versionen, etc.)
-  * Schadsoftware kann keinen Schaden anrichten (Ähnlich Jails, chroot)
-
+- Container Virtualisierung
+- Keine Hardware Virtualisierung
+- Host unabhängies Environment
+  - Gut zum bauen von verschiedenen Binär-Paketen für Verschiedene Linux Systeme
+  - Ein Build Host, N Build Environments
+- Zum testen von Software oder Services
+  - Ohne das Host System zu kompromitieren (Library Versionen, etc.)
+  - Schadsoftware kann keinen Schaden anrichten (Ähnlich Jails, chroot)
 
 [Dokumentation für Dockerfile](https://docs.docker.com/engine/reference/builder/)
-
 
 ```Dockerfile
 FROM baseimage:tag
@@ -67,7 +66,16 @@ Hands-On Training: Environment Variablen mit `ENV` und Static File Serve mit Vol
 
 ### Beispiel 4: Gitea
 
-```
+Praktisches Beispiel mit einem "echten" Service. Daten liegen außerhalb vom Container. Verschiedene Environment Variablen. User anlegen und benutzen.
+
+Container bauen: `docker build -t 04-gitea .`  
+Container ausführen: `docker run --name 04-gitea -p 3000:3000 -v ${PWD}/data:/data --rm 04-gitea`  
+Container als Deamon ausführen: `docker run --name 04-gitea -p 3000:3000 -v ${PWD}/data:/data --rm -d 04-gitea`  
+Container stoppen: `docker stop 04-gitea`  
+
+Adduser help bei alpine
+
+```man
 Usage: adduser [OPTIONS] USER [GROUP]
 
 Create new user, or add USER to GROUP
