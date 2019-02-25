@@ -66,7 +66,7 @@ ENTRYPOINT ["befehl", "arg1", "arg2"]
 
 In diesem Beispiel werden die Dockerfile Befehle `FROM`, `COPY`, `RUN` und `CMD` behandelt.  
 
-In Corporate Networks muss man unter Umständen den DNS Server mit angeben. Dies ist ein known bug wenn systemd-resolved verwendet wird. Der nachvolgende Schritt ist nur bei Docker notwendig, nicht bei Kubernetes.
+In Corporate Networks muss man unter Umständen den DNS Server mit angeben. Dies ist ein known bug wenn systemd-resolved verwendet wird. Der nachfolgende Schritt ist nur bei Docker notwendig, nicht bei Kubernetes.
 Immer den Corporate DNS Server benutzen:
 
 ```SHELL
