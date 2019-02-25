@@ -11,6 +11,13 @@ Docker und Kubernetes Workshop
     - [Beispiel 3: simple service](#beispiel-3-simple-service)
     - [Beispiel 4: Gitea](#beispiel-4-gitea)
     - [Best Practice](#best-practice)
+  - [Kubernetes](#kubernetes)
+    - [Setup Mast und Node hinzufügen](#setup-mast-und-node-hinzuf%C3%BCgen)
+    - [Den Cluster als User verwalten](#den-cluster-als-user-verwalten)
+    - [kubectl Befehle](#kubectl-befehle)
+    - [Netzwerk Plugin hinzufügen](#netzwerk-plugin-hinzuf%C3%BCgen)
+    - [Taint master](#taint-master)
+    - [Setup persistent storage](#setup-persistent-storage)
 
 ## Docker
 
