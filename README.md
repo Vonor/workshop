@@ -12,7 +12,7 @@ Docker und Kubernetes Workshop
     - [Beispiel 4: Gitea](#beispiel-4-gitea)
     - [Best Practice](#best-practice)
   - [Kubernetes](#kubernetes)
-    - [Setup Mast und Node hinzufügen](#setup-mast-und-node-hinzuf%C3%BCgen)
+    - [Setup Master und Node hinzufügen](#setup-master-und-node-hinzuf%C3%BCgen)
     - [Den Cluster als User verwalten](#den-cluster-als-user-verwalten)
     - [kubectl Befehle](#kubectl-befehle)
     - [Netzwerk Plugin hinzufügen](#netzwerk-plugin-hinzuf%C3%BCgen)
@@ -140,7 +140,7 @@ Kubernetes stellt die Orchestration für Docker Container dar.
 - Master / Node Prinzip
 - Eigene Netzwerk Infrastruktur
 
-### Setup Mast und Node hinzufügen
+### Setup Master und Node hinzufügen
 
 Kubernetes erwartet, dass SWAP deaktiviert ist.  
 
@@ -149,6 +149,7 @@ sed -i 's@^/swapfile.*@@' /etc/fstab
 swapoff -a
 free -m # Zum Überprüfen
 ```
+
 `kubeadm` ist der zentrale Verwaltungsbefehl. Mit diesem wird der Cluster initialisiert und gemanaged.  
 `kubectl` ist der zentrale Befehl um die Inhalte im Cluster zu managen.
 
